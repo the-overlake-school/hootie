@@ -51,7 +51,7 @@
 
 <div{{ attributes.addClass(classes) }}>
       {% for item in items %}
-    {% if isFeatured %}
+    {% if item.content.featured %}
         <div class="slideover-tile featured">
     {% else %}
         <div class="slideover-tile">
