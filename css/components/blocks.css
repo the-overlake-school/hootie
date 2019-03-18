@@ -685,6 +685,10 @@ ul.quicklinks {
 		text-align: center;
 	}
 
+    .slideover-tile.featured {
+        min-width: 240px;
+    }
+
 }
 
 @media only screen and (max-width: 40em) {

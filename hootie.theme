@@ -80,6 +80,20 @@ function hootie_preprocess_field__block_content__dashboard(&$variables) {
   $variables['#attached']['library'][] = 'hootie/dashboard-static';
 }
 
+function hootie_preprocess_field__block_content__flexbox_slideover_tile(&$variables) {
+  $variables['isFeatured'] = ['apples', 'oranges', 'bananas'];
+  for ($i = 0; $i < count($variable['items']); $i++) {
+    if (isset($variables['items'][$i]['content']['field_slideover_featured'][0]['#markup']) && $variables['items'][$i]['content']['field_slideover_featured'][0]['#markup'] == 'Featured') {
+      $variables['isFeatured'][$i] = true;
+    }
+    else {
+      $variables['isFeatured'][$i] = false;
+    }
+  }
+//  print_r($variables['isFeatured']);
+//  die();
+}
+
 function hootie_preprocess_region__dashboard_static(&$variables) {
   $variables['#attached']['library'][] = 'hootie/dashboard-static';
 }
