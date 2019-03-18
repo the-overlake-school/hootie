@@ -1,0 +1,316 @@
+.filter-wrapper,
+#edit-field-materials-fee-description-0-format,
+.field--type-link .description,
+#edit-field-practice-schedules-0-uri--description { /* Hides annoying text descriptions and format box on Drupal text fields */
+	display: none !important;
+}
+
+.js-text-summary-wrapper.text-summary-wrapper { /* Always show summary field */
+    display: block !important;
+}
+
+.webform-submission-form a[href^=mailto]:before {
+	content: none;
+}
+
+fieldset {
+    background: #f9f9f9;
+    border: 2px solid #333;
+    width: auto;
+}
+
+.fieldset-wrapper {
+    margin: 1rem;
+}
+
+.fieldset-wrapper .fieldset-wrapper {
+    margin: 0;
+}
+
+fieldset .js-webform-radios-fieldset {
+    background: #f9f9f9;
+}
+
+legend {
+    padding: .5rem 1rem;
+    background: #333;
+}
+
+fieldset .js-form-item legend,
+fieldset .js-webform-radios-fieldset legend {
+    border: none;
+    background: #f9f9f9;
+}
+
+fieldset fieldset legend {
+    border: .5px solid rgb(169,169,169);
+    background: white;
+	margin-left: 1em;
+}
+
+.fieldset-legend {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+fieldset fieldset .fieldset-legend {
+    color: inherit;
+}
+
+fieldset fieldset.js-form-item legend { /* 1st nested fieldset */
+    background: white;
+    border: .5px solid rgb(169,169,169);
+}
+
+fieldset fieldset fieldset.js-form-item legend { /* 2nd nested fieldset */
+}
+
+fieldset .fieldgroup.js-form-item legend {
+	border: none;
+	background: #f9f9f9;
+}
+
+fieldset fieldset .fieldgroup.js-form-item legend,
+fieldset fieldset fieldset .fieldgroup.js-form-item legend {
+	background: white;
+}
+
+fieldset .js-webform-radios-fieldset .fieldset-legend,
+fieldset .fieldgroup.js-form-item legend .fieldset-legend {
+    color: inherit;
+    text-transform: none;
+}
+
+
+
+.webform-submission-form .description {
+    line-height: 140%;
+    margin-top: .5rem;
+}
+
+.fieldgroup,
+.webform-address .fieldgroup {
+    background: #f9f9f9;
+}
+
+fieldset fieldset .fieldgroup,
+fieldset fieldset .js-form-item legend {
+    background: white;
+}
+
+fieldset fieldset {
+	background: white;
+	border: .5px solid rgb(169, 169, 169);
+}
+
+fieldset fieldset .fieldset-wrapper {
+	margin-top: 0;
+}
+
+.form-textarea-wrapper textarea {
+	padding: .5rem 1rem;
+}
+
+.webform-multiple-table table {
+    width: 100%;
+    border: none;
+}
+
+.form-item .container-inline {
+    margin-top: 3rem;
+}
+
+input:not([type]),
+input[type="email" i],
+input[type="password" i],
+input[type="tel" i],
+input[type="url" i],
+input[type="text" i] {
+	width: 100%;
+}
+
+.webform-submission-form input[type="text"],
+.webform-submission-form .form-select,
+.webform-submission-form #edit-email,
+.form-select {
+    width: 100%;
+}
+
+input[type="search"] { /* Remove rounded corners from iPhone */
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+.form-type-number input {
+    width: 80px;
+}
+
+
+/* Pretty up the form by hiding unneeded elements on multi-entry form tables. May need to undo this for certain forms. */
+
+.webform-multiple-table table thead,
+.webform-multiple-table td:first-child,
+.webform-multiple-tabledrag-toggle-weight,
+.js-form-type-webform-multiple.form-type-webform-multiple .container-inline {
+    display: none;
+}
+
+.webform-multiple-table td {
+    border: none;
+    white-space: normal;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.webform-multiple-table tr.draggable {
+    display: flex;
+    margin-top: 1.5em;
+    justify-content: center;
+}
+
+.js-form-item.form-item.js-form-type-textfield.form-type-textfield,
+.js-form-item.form-item.js-form-type-email.form-type-email {
+    display: block;
+    margin-top: 0.75rem;
+}
+
+#edit-service-dates-items input {
+    border: none;
+}
+
+/* * */
+
+.js-webform-radios {
+    margin-left: 1rem;
+}
+
+.webform-button--submit {
+    float: right;
+    margin-bottom: 1rem;
+}
+
+.form-actions {
+    height: 3rem;
+    text-align: right;
+}
+
+.js-webform-radios em { /* If there's explanitory text in radio selection, align with main text in line above */
+    margin-left: 1.6rem;
+    display: block;
+}
+
+#edit-name--wrapper .fieldset-wrapper,
+#edit-address--wrapper .fieldset-wrapper,
+#edit-confirm-email--wrapper .fieldset-wrapper {
+    margin: 0;
+}
+
+#edit-confirm-email--wrapper {
+    margin: 0;
+}
+
+.user-logged-in #edit-giving-contact #edit-name--wrapper,
+.user-logged-in #edit-giving-contact .form-type-email {
+	display: none;
+}
+
+#edit-admin legend {
+	background: #0c9ad6;
+}
+
+#edit-admin {
+	border: 2px solid #0c9ad6;
+	background: AliceBlue;
+}
+
+.webform-element-more--link:before,
+.webform-element-more.is-open .webform-element-more--link:before {
+	content: none;
+}
+
+.form-type-radio .description,
+.form-type-checkbox .description {
+    margin-left: 2em;
+}
+
+
+
+/* FORM SPECIFIC */
+
+.waitlist { /* Ski bus wait list message */
+    color: #ee4036;
+}
+
+#edit-transportation-pm-520-stops--wrapper--description { /* Transportation stop note */
+    font-size: 1em;
+    color: #ee4036;
+    display: list-item;
+    margin-left: 2.1rem;
+    padding-left: .5rem;
+}
+
+/* GALA & GIVING FORMS */
+
+#edit-payment .js-form-wrapper { /* Fixes background of payment fieldset in giving form */
+    background: white;
+}
+
+.webform-button--draft { /* Drafts is turned on for Giving; hide save draft button */
+    display: none;
+}
+
+
+.webform-submission-gala-registration-add-form #edit-options select,
+.webform-submission-gala-payment-form-add-form #edit-items select { /* Number select */
+    width: 3em;
+}
+
+.webform-submission-gala-registration-add-form #sum,
+.webform-submission-gala-payment-form-add-form #sum {
+	color: #ee4036;
+	font-weight: bold;
+	margin: 0 0 1rem 1rem;
+}
+
+
+.webform-submission-gala-payment-form-add-form .webform-element-more {
+    margin-left: 4.8em;
+}
+
+/* ENROLLMENT PART I */
+
+.form-item-add-a-second-student,
+.form-item-add-a-third-student {
+    color: red;
+    background: pink;
+    padding: 1em;
+}
+
+.form-item-add-a-second-student .option,
+.form-item-add-a-third-student .option {
+    font-weight: bold;
+	text-transform: uppercase;
+}
+
+#edit-risk-release #edit-container,
+#edit-risk-release2 #edit-container2,
+#edit-risk-release3 #edit-container3 {
+    border: .5px solid rgb(169, 169, 169);
+	height: 25em;
+    overflow-y: scroll;
+    padding: 0 1em 2em;
+    background: floralwhite;
+	margin-top: 2em;
+}
+
+.form-item-policies-agree,
+.form-item-policies-agree2,
+.form-item-policies-agree3 {
+    margin: 2em 0;
+}
+
+#edit-policies-agree,
+#edit-policies-agree2,
+#edit-policies-agree3 {
+    margin: 1em 0 0 2em;
+}

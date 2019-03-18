@@ -1,0 +1,120 @@
+button, 
+.button,
+.button-center,
+.button-inline {
+    background: #f47d35 none repeat scroll 0 0;
+	border: 2px #efefef solid;
+    color: white;
+	float: right;
+	font-weight: bold;
+	margin: 0 0 2em 100%;
+    padding: .5em 1em;
+    text-align: center;
+	text-transform: uppercase;
+}
+
+.button-inline {
+	margin-left: 2em;
+}
+
+.button-center {
+	float: none;
+	margin: 0 auto;
+	display: block;
+	width: 175px;
+}
+
+.button a,
+.button-center a,
+.button-inline a {
+	color: white;
+	border-bottom: none;
+	padding: 1rem;
+}
+
+.button a:hover,
+.button-center a:hover,
+.button-inline a:hover {
+	border-bottom: none;
+}
+
+button:hover,
+.button:hover,
+.button-center:hover,
+.button-inline:hover {
+	background: #fdb813;
+}
+
+.block-supplement .button-inline {
+	float: none;
+	max-width: 200px;
+	margin: 0;
+}
+
+#search-block-form .button,
+#search-block-form--2 .button {
+    background: #333333;
+	border: none;
+}
+
+#search-block-form input#edit-submit,
+#search-block-form--2 #edit-submit--2 {
+    text-align: center;
+    width: 100%;
+}
+
+#search-block-form input#edit-submit:hover,
+#search-block-form--2 input#edit-submit:hover {
+	background: #333333;
+}
+
+.ravenna-button img {
+    float: right;
+	margin: 0 0 1rem 1rem;
+    width: 30%;
+}
+
+.ravenna-button a {
+    border-bottom: none;
+}
+
+button#next, 
+button#previous { /* Lunch menu arrows */
+    margin: 0;
+    background: transparent;
+    border: none;
+}
+
+.path-veracross .details-wrapper input.button.js-form-submit.form-submit { /* Fix weird positioning of Order Textbooks buttons on /veracross/schedule */
+    float: none;
+    margin: 2em 0;
+}
+
+/* CLEAN - style to clear all the fancy styling above until I have time to refactor buttons on the site*/
+button.button-clean, .button.button-clean {
+	margin: 0;
+	float: none;
+	width: auto;
+	height: auto;
+}
+
+@media only screen and (max-width: 72em) {
+	.block-supplement .button-inline {
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+
+	.button {
+		float: none;
+		margin: 0;
+	}
+	
+	.ravenna-button img {
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+
+}

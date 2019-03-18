@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128" rel="stylesheet">
+    <style>
+      .barcode {
+        font-family: 'Libre Barcode 128', cursive;
+        font-size: 200px;
+      }
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="barcode">
+      {{ page.content.hootie_content }}
+    </div>
+    <div>{{ page.content.hootie_content }} </div>
+
+  </body>
+</html>

@@ -1,0 +1,92 @@
+.a2a_kit { /* Social media share links */
+    float: right;
+}
+
+
+/* Timeline */
+	
+.timeline {
+	height: 600px !important;
+	width: 100%;
+}
+
+.tl-timeline {
+	margin-bottom: 4rem;
+}
+
+.tl-message, 
+.tl-message-full { /* Hide help overlay */
+	display: none !important;
+}
+
+h2.tl-headline {
+    border-bottom: none;
+}
+
+
+/* Athletics Twitter widget */
+
+iframe#twitter-widget-0 {
+    border: 1px solid #efefef !important;
+    width: 100%;
+}
+
+#block-athleticsflexbox .field__item {
+    margin: 2px;
+}
+
+
+/* ARTS INSTAGRAM */
+
+#block-instagramblock {
+    float: right;
+    width: 310px;
+    margin: 0 0 2rem 2rem;
+	z-index: 10;
+	text-align: right;
+}
+
+#block-instagramblock::after {
+    content: 'Follow @OverlakeArts on Instagram!';
+    font-weight: bold;
+}
+
+#block-instagramblock img {
+    width: 44%;
+}
+
+#block-instagramblock--2 {
+    display: none;
+}
+
+/* Twitter - add these styles in with inline js 
+
+.twitter-container {
+    height: 400px;
+    overflow-y: hidden;
+}
+
+.timeline-TweetList-tweet {
+	border-top: none;
+}
+	
+.timeline-Tweet { Show first 3 tweets inline
+	border-top: none;
+	float: left;
+	padding: 0 1%;
+	width: 31%;
+	height: 300px;
+}
+
+.timeline-Tweet-text {
+	font-size: 14px;
+	line-height: 150%;
+}
+
+.timeline-Viewport {
+	overflow-y: hidden;
+}
+
+*/
+
+

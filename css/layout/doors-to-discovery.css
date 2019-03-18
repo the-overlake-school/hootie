@@ -1,0 +1,130 @@
+/* Doors to Discovery Campaign Header */
+
+.campaign-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#block-campaignmasthead {
+    margin-top: 2em;
+}
+
+.campaign-logo a {
+    border-bottom: none;
+}
+
+.campaign-logo {
+    width: 50%;
+    height: auto;
+}
+
+.campaign-logo img {
+    max-width: 500px;
+}
+
+.campaign-sub-menu a {
+    color: white;
+}
+
+.campaign-sub-menu {
+    width: 100%;
+    height: 80%;
+    background-image: url(https://www.overlake.org/sites/default/files/documents/campaign/nav_bg.png);
+    text-align: right;
+    background-position: left;
+    background-size: cover;
+}
+
+.campaign-sub-menu p {
+    padding-right: 2rem;
+}
+
+#block-campaignsubmenu {
+    display:none;
+    border: none;
+    background: #82b456;
+    color: white;
+}
+
+#block-campaignsubmenu a {
+    color: white;
+}
+
+/* Doors to Discovery Campaign Links */
+
+.subcampaigns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+}
+
+.subcampaigns a {
+    border-bottom: none;
+    width: 30%;
+    max-width: 300px;
+}
+
+.subcampaigns a img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.custom-align {
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 55em) {
+
+    .campaign-header {
+        justify-content: center;
+    }
+
+    .campaign-header .f-align-i-end.w-50 {
+        align-items: center;
+        width: 100%;
+    }
+
+    .campaign-sub-menu {
+        display:none;
+    }
+
+    .campaign-logo {
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #block-campaignsubmenu {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 40em) {
+
+    .custom-align {
+        align-items: flex-start;
+    }
+
+}
+
+@media only screen and (max-width: 30em) {
+
+    .subcampaigns {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .subcampaigns a {
+        width: 100%;
+    }
+
+    .subcampaigns a:nth-of-type(2) {
+        margin-left: -11%;
+    }
+
+}

@@ -1,0 +1,393 @@
+html {
+ 	height: 100%;
+}
+
+body {
+	background: url('../../img/bg.jpg');
+	min-height: 100%;
+	overflow-x: visible;
+	overflow-x: hidden; /* Doesn't work in Safari, see hack below */
+}
+
+.region-header {
+    background: #ee4036;
+    font-weight: bold;
+    color: white;
+    margin-top: -1em;
+    padding: 1em 2em .5em 2em;
+}
+	
+.container {
+	background: url('../../img/trees.png') no-repeat scroll center bottom;
+	background-size: contain;
+	border-bottom: 2rem solid #ffd561;
+	overflow: hidden;
+	padding-top: 40px;
+}
+
+header {
+    display: block;
+    margin: 0 0 2rem;
+    width: 100%;
+}
+
+.messages {
+	margin-bottom: 1rem;
+}
+
+.layout-banner-top {
+	margin: 0 8% 0 27%;
+	overflow: hidden;
+}
+
+.layout-banner-top .block, 
+.layout-banner-bottom .block {
+    color: white;
+    background: #0c9ad6;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem 2rem;
+	clear: both;
+}
+
+.page-content {
+    background: white none repeat scroll 0 0;
+    border: 2px solid #ffd561;
+    margin: 0 8% 2rem 27%;
+    min-height: 600px;
+    padding: 0rem 3rem 3rem;
+}
+
+.region-content { /* Removes white space within pages; is problematic on pages with float:right blocks (arts, out ed) */
+    overflow: hidden;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.page-content .block-contact { 
+    display: inline-block;
+ }
+
+.dashboard-col1 {
+	float: left;
+	width: 30%;
+}
+
+.dashboard-col2 {
+	float: left;
+	margin: 0 4%;
+	width: 32%;
+}
+
+.dashboard-col3 {
+	float: right;
+	width: 30%;
+}
+
+.layout-sidebar-first {
+    float: left;
+    margin-left: 4%;
+    padding: 0 2rem 2rem 0;
+/*	position: absolute;  Doesn't push container open when expanded. Why was this set this way?  */
+    width: 19%;
+}
+
+.layout-sidenav {
+    background-color: transparent;
+    height: calc(100vh - 32px); /* Fills height of browser window with no vertical scroll when nav is closed */
+    position: relative;
+    float: right;
+    margin-right: -519px;
+    top: 0;
+    z-index: 500;
+}
+
+#sidenav-content .block {
+  display: none;
+}
+
+#slider {
+    width: 18rem;
+    float: right;
+    background: #fdb813;
+	min-height: 100%;
+    padding: 1rem 2rem;
+}
+
+#flyouts {
+	cursor: pointer;
+    float: left;
+    width: 15rem;
+    margin-left: -17rem;
+	top: 40px;
+    position: fixed;
+}
+
+#sidenav-content {
+	color: white;
+    padding-top: 1rem;
+}
+
+.region-footer {
+    overflow: hidden;
+    padding-left: 2%;
+	region-bottom: 2rem;
+    width: 100%;
+}
+
+.region-footer .block {
+    color: white;
+    float: left;
+    width: 19%;
+	margin: 2%;
+}
+
+.region-footer #block-menuquicklinks {
+	text-align: right;
+}
+
+.region-flex-box {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.centered-photo {
+	width: 60%;
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+.centered-photo-large {
+	width: 75%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/* Safari 9+ Hacks */
+	
+	.layout-sidenav:not(*:root) {
+		height: 100vh;
+		transform: translate3d(0,0,0);
+	}
+	
+	_::-webkit-:not(:root:root), #page {
+		overflow-x: hidden;
+	}
+
+/*	#page:not(*:root) {
+		overflow-x: hidden;  Safari doesn't read this if it's part of the body style, so add it here 
+	}
+*/
+	
+@media only screen and (max-width: 72em) {
+	
+	.container {
+		background-size: initial;
+	}
+
+	.dashboard-col1	{
+		float: left;
+		width: 47%;
+	}
+
+	.dashboard-col2	{
+		float: right;
+		margin: 0;
+		width: 47%;
+	}
+	
+	.dashboard-col3	{
+		clear: both;
+		float: none;
+		width: 100%;
+	}
+}
+		
+@media only screen and (max-width: 53.12em) {
+		
+	
+	header {
+		margin-bottom: 1rem;
+	}
+
+	.centered-photo {
+		width: 100%;
+		max-width: none;
+	}
+		
+	.container {
+		padding: 0 10% 0 1rem;
+		background-size: auto;
+	}
+	
+	ul.header-images li.logo {
+		float: left;
+		margin: 0;
+		padding-left: 0;
+		width: 30%;
+	}
+	
+	ul.header-images li:nth-child(2) {
+		width: 30%;
+		margin: 0 5%;
+	}
+	
+	ul.header-images li:nth-child(3) {
+		float: right;
+		width: 30%;
+		margin: 0;
+	}
+	
+	ul.header-images li:nth-child(4),
+	#block-footerplaceholder,
+	#block-footerresources	{
+		display: none;
+	}
+
+	#block-footerschoolinfo,
+	#block-footerschoolstatements,
+	.region-footer #block-menuquicklinks{
+		width: 29%;
+		text-align: center;
+	}
+	
+	.page-content {
+		margin: 0;
+	}
+	
+	.layout-banner-top {
+		margin: 0;
+	}
+	
+	.layout-banner-bottom {
+		margin: 0;
+	}
+
+	.layout-banner-top .block,
+	.layout-banner-bottom  .block {
+		margin: 0 0 2rem 0;
+	}
+	
+	.layout-sidebar-first {
+		display: none;
+    }
+	
+	.region-footer {
+		padding-left: 0;
+	}
+
+}
+	
+@media only screen and (max-width: 40em) {
+	
+	.container {
+		padding: 0 1rem;
+	}
+	
+	#page {
+		overflow-x: hidden; /* Mobile doesn't read this if it's part of the body style, so add it here */	
+	}
+		
+	ul.header-images li.logo {
+		float: left;
+		width: 46%;
+	}
+	
+	ul.header-images li:nth-child(2) {
+		float: right;
+		margin: 0;
+		width: 46%;
+	}
+	
+	.region-footer .social-media {
+		text-align: center;
+	}
+
+	.region-footer #block-menuquicklinks {
+		width: 100%;
+		text-align: center;
+		margin: 0 0 1.5rem 0;
+	}
+		
+	ul.header-images li:nth-child(3),
+	#block-footerresources	{
+		display: none;
+	}
+
+
+	.dashboard-col1,
+	.dashboard-col2,
+	.dashboard-col3	{
+		clear: both;
+		float: none;
+		width: 100%;
+	}
+	
+	.region-content .block {
+		float: none;
+		display: block;
+		padding: 0;
+		width: 100%;
+	}
+
+	.region-content .block-veracross-upcoming-events {
+		display: flex; /*negate above block display to allow upcoming events to remain centered*/
+		width: 98%;
+	}
+	
+	.layout-sidenav,
+	.path-frontpage .layout-sidenav	{
+		margin-right: -352px;
+		height: 100vh;
+	}
+
+	
+	#flyouts {
+		margin-left: -6.5rem;
+		top: 0;
+		z-index: -10;
+	}	
+	
+	li.flyout-menu h2 { /* Hide text in flyouts */
+		visibility: hidden;
+	}
+	
+	#block-footerschoolinfo,
+	#block-footerschoolstatements {
+		float: none;
+		width: initial;
+	}
+	
+}
+
+@media only screen and (max-width: 30em) {
+	
+	.region-header {
+		margin-top: 0;
+	}
+	
+	.layout-banner-top {
+		margin: 0;
+	}
+
+	.page-content {
+		margin: 0 0 2rem;
+		min-height: auto;
+		padding: 0 2em 2em;
+	}
+
+	ul.header-images li.logo {
+		margin-top: -8rem;
+		width: 100%;
+	}
+	
+	ul.header-images li:nth-child(2) {
+		display: none;
+	}
+
+}

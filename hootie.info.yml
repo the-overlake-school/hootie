@@ -1,0 +1,28 @@
+name: Hootie
+description: 'A responsive theme designed for <a href="https://www.overlake.org">The Overlake School</a>.'
+base theme: classy
+package: Custom
+type: theme
+version: 1.0
+core: 8.x
+libraries:
+  - hootie/global-css
+  - hootie/global-js
+  - core/normalize
+regions:
+  header: 'Header'
+  sidebar_first: 'Sidebar First'
+  main_menu: 'Main Menu'
+  banner_top: 'Banner Top'
+  content: 'Content'
+  flex_box: 'Flex Box'
+  dashboard_static: 'Static Dashboard'
+  dashboard: 'Dashboard'
+  dashboard_col1: 'MyOverlake Column 1'
+  dashboard_col2: 'MyOverlake Column 2'
+  dashboard_col3: 'MyOverlake Column 3'
+  sidebar_second: 'Sidebar Second'
+  banner_bottom: 'Banner Bottom'
+  footer: 'Footer'
+  page_top: 'Page Top'
+  page_bottom: 'Page Bottom'

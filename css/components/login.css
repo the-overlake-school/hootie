@@ -1,0 +1,19 @@
+form.multiauth .authsource input {
+    color: white;
+    width: 100%;
+    background: #82b456;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem;
+    white-space: normal;
+    word-wrap: normal;
+}
+
+form.multiauth .authsource input:hover {
+    background: #356a20;
+}
+
+#flyouts .login-link {
+    color: white;
+    border-bottom: none;
+}

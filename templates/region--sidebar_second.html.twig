@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div id="slider">
+
+<div id="flyouts">
+  <ul>
+    <li class="flyout-menu">Menu</li>
+    <li class="flyout-search">Search</li>
+    <li class="flyout-events">News & Events</li>
+    <li class="flyout-visit"><a href="/admission/visit">Visit</a></li>
+    <li class="flyout-login login-link">{{ logged_in ? 'Log Out' : 'Log In' }}</li>
+  </ul>
+</div> {# /#flyouts #}
+
+{%
+  set classes = [
+    'region',
+    'region-' ~ region|clean_class,
+  ]
+%}
+{% if content %}
+  <div id="sidenav-content" {{ attributes.addClass(classes) }}>
+  <div id="nav-close"></div>
+    {{ content }}
+  </div>
+{% endif %}
+
+</div>

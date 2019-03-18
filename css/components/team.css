@@ -1,0 +1,21 @@
+.field.field--name-field-team-photo {
+    float: right;
+	margin: 0 0 1rem 1rem;
+    width: 50%;
+}
+
+.field.field--name-field-team-photo img {
+	height: auto;
+	width: 100%;
+}
+
+.cancelled {
+    text-decoration: line-through;
+    color: #ee4306;
+}
+
+.field--name-field-practice-schedules .field__item::before {
+    content: '\2022';
+    margin-right: .3rem;
+    margin-left: 1rem;
+}

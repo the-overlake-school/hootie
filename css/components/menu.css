@@ -1,0 +1,364 @@
+/**
+ * @file
+ * Visual styles for menus.
+ */
+
+ul.menu a {
+	display: block;
+	border-bottom: none;
+} 
+
+ul.menu {
+  list-style: none outside;
+  margin-left: 0; /* LTR */
+  padding: 0;
+  text-align: left; /* LTR */
+}
+
+[dir="rtl"] ul.menu {
+  margin-left: 0;
+  margin-right: 1em;
+  text-align: right;
+}
+
+.menu-item--expanded {
+	list-style: none;
+	padding-top: 0.2rem;
+}
+
+.menu-item--collapsed {
+	list-style-image: none !important; /* Fixes glitch in Edge */
+	list-style-type: none !important;
+	list-style: none !important;
+}
+
+ul.menu ul.menu li.menu-item--collapsed {
+	list-style: disc !important;
+}
+
+.navigation h2 {
+    color: white;
+	cursor: pointer;
+    font-size: 1em;
+    margin: 0;
+	padding: 1em;
+}
+
+.navigation h2::after {
+    content: "+";
+    display: inline-block;
+    float: right;
+}
+
+.navigation ul.menu ul.menu li,
+.navigation ul.menu ul.menu li.menu-item--expanded { /* Add bullets to second tier menu */
+	list-style-type: disc;
+	margin-left: 1rem;
+}
+	
+.navigation ul.menu {
+	display: none;
+	padding: 0.8rem 1rem 1rem;
+}
+
+.navigation ul.menu ul.menu { 
+	display: none;
+	list-style: none;
+    margin-left: 1rem;
+	margin-top: 0;
+	padding: 0;
+}
+
+.active.navigation ul.menu,
+.active.navigation .menu-item--active-trail ul.menu,
+.layout-sidebar-first ul.menu ul.menu li.menu-item--expanded a::after,
+.layout-sidebar-first ul.menu ul.menu li.menu-item--expanded.menu-item--active-trail .menu {
+  display: block;
+}	
+
+/* LEFT NAV SPECIFIC */
+ 
+.layout-sidebar-first .block-menu {
+    background-color: #356a20;
+    margin-bottom: 0.5rem;
+}
+
+.layout-sidebar-first ul.menu {
+    background: url('../../img/bg.jpg');
+	padding: 0.8rem 1rem 1rem;
+	border: 2px solid #356a20;
+}
+
+.layout-sidebar-first ul.menu a {
+    color: #356a20;
+}
+
+.layout-sidebar-first ul.menu a:hover {
+    color: #82B456;
+}
+
+.layout-sidebar-first ul.menu ul.menu { 
+	background: url('../../img/bg.jpg');
+	border: none;
+}
+
+.layout-sidebar-first ul.menu ul.menu li { 
+	color: #356a20;
+}
+
+.layout-sidebar-first ul.menu ul.menu ul.menu { 
+	display: none;
+	margin-bottom: .5rem;
+	margin-left: 0;
+}
+
+.layout-sidebar-first ul.menu ul.menu ul.menu li {
+    list-style-type: none !important;
+    margin-left: 0;
+}
+
+.menu-item.menu-item--expanded.menu-item--active-trail ul.menu {
+	display: block;
+}
+
+#block-studentlife-2-menu .layout-sidebar-first ul.menu ul.menu li.menu-item.menu-item--active-trail a {
+	color:#82b456; /* Show the parent of hidden submenus as active link; Don't apply to Academics menu because of visible submenus in Exp Ed */
+}
+
+/*
+#block-useraccountmenu ul.menu,
+#block-myoverlake-menu ul.menu {
+    border: none;
+	display: block;
+    margin-top: .5rem;
+}
+
+#block-useraccountmenu ul.menu {
+    background: #ffd561;
+    text-transform: uppercase;
+}
+
+#block-myoverlake-menu ul.menu {
+    background: #82B456;
+}
+
+
+#block-useraccountmenu a,
+#block-myoverlake-menu a {
+    color: white;
+}
+
+#block-myoverlake-menu li.menu-item.menu-item--active-trail::after {
+    content: '\f04b';
+    float: right;
+    color: #82b456;
+    font-family: fontawesome;
+    margin-right: -1.7rem;
+	margin-top: -1.5rem;
+}
+*/
+
+#login {
+    background: #ffd561;
+	color: white;
+	text-transform: uppercase;
+    padding: 1rem;
+}
+
+#login a,
+#myoverlake a {
+    color: white;
+    border-bottom: none;
+}
+
+#myoverlake {
+    background: #82b456;
+	color: white;
+    padding: 1rem;
+	margin-bottom: .5rem;
+}
+
+
+li.menu-item.menu-item--expanded a::after,
+ul.menu ul.menu li.menu-item--expanded a::after,
+ul.menu li.menu-item.menu-item--expanded li.menu-item--expanded a::after {
+    content: "+";
+    float: right;
+}
+
+.navigation ul.menu ul.menu ul.menu li a::after,
+.navigation ul.menu ul.menu li a::after,
+ul.menu li.menu-item.menu-item--expanded.menu-item--active-trail li.menu-item a::after {
+	content: none;
+}
+
+/*
+ul.menu li.menu-item.menu-item--expanded.menu-item--active-trail a::after,
+
+
+a.is-active::before {
+    content: url('../../img/active.png'); 
+	content: "-";
+    left: 0;
+    position: absolute;
+}*/
+
+ul.menu a.is-active {
+    color: #82b456;
+}
+
+
+/* li.menu-item.menu-item--expanded a::after {
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid;
+    border-top: 6px solid transparent;
+    content: "";
+    margin: .4rem;
+    position: absolute;
+} */
+
+
+/* RIGHT NAV SPECIFIC */
+
+#nav-close {
+    background: url(../../img/close.png) no-repeat top right;
+    cursor: pointer;
+    height: 2rem;
+    margin: -1rem 0 1rem;
+    width: 100%;
+    background-size: 11%;
+}
+
+/*
+.login-mobile {
+	display: none;
+	background: #356a20;
+	border-bottom: 2px solid white;
+    padding: 1rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+	
+.login-mobile a {
+    color: white;
+    border-bottom: none;
+	text-transform: uppercase;
+}
+*/
+
+
+#sidenav-content {
+	padding-top: 1rem;
+}
+
+#flyouts ul {
+	list-style: none;
+}
+
+#flyouts li {
+	background-size: 14%;
+	color: white;
+	padding: 1.2em 0 1.2em 3.6em;
+	border-bottom: none;
+    margin-bottom: 0.4em;
+	transition: margin .17s ease-in;
+}
+
+#flyouts li a,
+.layout-sidenav .block-menu {
+    color: white;
+}
+
+#flyouts li:hover {
+	margin-left: -.5rem;
+}
+
+li.flyout-menu {
+	background: #fdb813 url("../../img/menu.png") no-repeat 7% 50%;
+	background-size: 13%;
+}
+
+li.flyout-search {
+	background: #fdb813 url("../../img/search.png") no-repeat 7% 50%;
+	background-size: 13%;
+	}
+
+li.flyout-events {
+	background: #fdb813 url("../../img/events.png") no-repeat 7% 50%;
+}
+
+li.flyout-visit {
+	background: #ffd561 url("../../img/visit.png") no-repeat 7% 50%;
+}
+
+li.flyout-login {
+	background: #ffd561 url("../../img/login.png") no-repeat 7% 50%;
+}
+
+#flyouts li.flyout-visit:hover,
+#flyouts li.flyout-login:hover {
+	margin-left: 0;
+}
+
+#flyouts li.flyout-visit a,
+#flyouts li.flyout-login a {
+    padding: 1rem 5rem 1rem 3rem;
+    margin-left: -3rem;
+}
+
+
+.layout-sidenav .navigation ul.menu { 
+	padding-top: 0;
+}
+
+.layout-sidenav ul.menu ul.menu li { 
+	color: #ffffff;
+}
+
+.layout-sidenav .navigation h2 {
+	border-top: 2px solid white;
+	text-align: center;
+} 
+
+.layout-sidenav .navigation a,
+.layout-sidenav .navigation a.is-active {
+	color: white;
+} 
+
+@media only screen and (max-width: 40em) {
+
+	/*li.flyout-search,*/
+	/*li.flyout-events,*/
+	/*li.flyout-visit,*/
+	/*li.flyout-login {*/
+		/*display: none;*/
+	/*}*/
+	
+	#flyouts li:hover {
+		margin-left: 0;
+		cursor: pointer;
+	}
+	
+	#flyouts li {
+		padding-left: 4.6em;
+	}
+	
+	.login-mobile {
+		display: block;
+	}
+	
+	.navigation ul.menu ul.menu {
+		margin-top: 1rem;
+	}
+	
+	.layout-sidenav .navigation h2 {
+		text-align: left;
+	} 
+
+	
+	.menu-item {
+		padding-bottom: 1rem;
+	}
+	
+}
+

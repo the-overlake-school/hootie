@@ -1,0 +1,126 @@
+body {
+	background: url('../../img/fallback.jpg') center no-repeat;
+	background-size: cover;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.region-header {
+    width: 96%;
+    position: relative;
+}
+
+#video-wrapper {
+	background: white;
+}
+
+.container {
+	display: none;	
+}
+
+#main-menu { /* Region needs to load so menu content can be duplicated into slider nav, but shouldn't be visible */
+    display: none;
+}
+
+/*
+.layout-sidenav {
+	right: 160px; Opening position
+}
+
+.path-frontpage .layout-sidenav {
+	margin-right: -518px;
+}
+*/
+ 
+ 
+.path-frontpage .layout-sidenav {
+	margin-right: -352px; /* Open position is farther left so text can be seen */
+}
+
+
+
+.logo-front {
+	background-image: url('../../img/logoFront.png');
+	background-size: 75%;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	bottom: 2rem;
+	height: 330px;
+	left: 2rem;
+	opacity: 1;
+	position: fixed;
+	width: 400px;
+}
+
+/*
+.tag {
+    color: white;
+	font-style: italic;
+    text-align: center;
+    margin-top: 21rem;
+	width: 300px;
+}
+*/
+
+.video-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: no-repeat;
+    background-size: cover;
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
+    z-index: 0;
+}
+
+.video-wrapper video {
+    min-height: 101vh;
+}
+
+
+.video-info {
+    background: white;
+    bottom: 5.1rem;
+    color: #333333;
+    display: none;
+    font-size: .9rem;
+	opacity: 0.9;
+    padding: 1rem;
+    position: absolute;
+    right: 5.14rem;
+    width: 22rem;
+}
+
+.info-icon {
+    background-image: url('../../img/info.png');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    bottom: 2rem;
+	cursor: pointer;
+    height: 50px;
+	opacity: 0.9;
+    position: fixed;
+    right: 2rem;
+    width: 50px;
+}
+
+
+@media only screen and (max-width: 40em) {
+	
+	.path-frontpage #flyouts {
+		margin-left: -112px;
+	}
+	
+	.info-icon {
+		display: none;
+	}
+	
+}

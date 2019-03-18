@@ -1,0 +1,37 @@
+/* See menu.css for slideout right nav styling */
+
+/* Site header images */
+
+header li img {
+	height: auto;
+	width: 100%
+}
+
+ul.header-images {
+	display: inline-block;
+	padding: 0;
+	width: 100%;
+}
+	
+.header-images li {
+	display: inline-block;
+	float: left;
+    margin: 0 2%;
+	width: 19%;
+}
+
+.header-images li.logo a{
+	border-bottom: none;
+}
+
+.header-images li.logo {
+	margin-left: 4%;
+}
+
+.header-images li.header3 {
+	margin-right: 6%;
+}
+
+a.site-logo {
+    border-bottom: medium none;
+}

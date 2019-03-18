@@ -1,0 +1,159 @@
+.paragraph--type--image,
+.field--type-image,
+.block .view-header img {
+    margin: 0 0 1rem 1rem;
+    width: 50%;
+    float: right;
+}
+
+/* COLORBOX IMAGES */
+
+a.colorbox.cboxElement {
+	border-bottom: none;
+}
+
+.block .view-header a img {
+	margin: 0;
+	width: 100%;
+	float: none;
+}
+
+/* Responsive iframe setup */
+
+.iframe-responsive-container {
+	position: relative;
+	overflow: hidden;
+	padding-top: 56.25%;
+}
+
+.iframe-responsive {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+/* DOORS TO DISCOVERY IMAGES */
+
+.d2d-header-img {
+	height: 250px;
+	overflow: hidden;
+	margin-top: 1rem;
+	background-image: url(https://www.overlake.org/sites/default/files/default_images/default.gif);
+	background-position: center;
+	background-size: cover;
+	border-top: 12px solid #82b456;
+	border-bottom: 12px solid #82b456;
+}
+
+.d2d-num-vis {
+	width: 30%;
+	min-width: 150px;
+	max-width: 250px;
+	margin-bottom: 1rem;
+	margin-right: 2rem;
+}
+
+.d2d-num-vis-med {
+	min-width: 175px;
+	max-width: 350px;
+}
+
+.d2d-num-vis-large {
+	width: 53%;
+	min-width: 220px;
+	max-width: 398px;
+}
+
+.d2d-num-vis-title {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.view-header .field--type-image {
+	margin: 0;
+	width: 50%;
+	float: right;
+}
+
+.img-right { /* Inline image in text paragraph */
+	float: right;
+    width: 50%;
+    margin: 0 0 2rem 2rem;
+}
+
+.img-left { /* Inline image in text paragraph */
+    float: left;
+    width: 50%;
+    margin: 0 2rem 2rem 0;
+}
+
+.node--type-article.node--view-mode-teaser .field--type-image { /* Article teaser images */
+	width: 100%;
+}
+
+.paragraph--type--image .field--type-image {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.node--view-mode-full .field--name-field-image img {
+	height: auto;
+	width: 100%;
+}
+
+.view-out-ed-trip-schedule .views-field-field-image,
+.view-project-week .views-field-field-image { /* Images in Experiential Ed views */
+    width: 30%;
+    float: right;
+    margin: .5rem 0 2rem 2rem;
+}
+
+.strategic-plan img {
+	height: auto;
+	margin: 0 1%;
+	width: 30%;
+}
+
+.strategic-plan a {
+    border-bottom: none;
+}
+
+@media only screen and (max-width: 64em) {
+	.view-header .field--type-image {
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	
+	.field--type-image,
+	.field.field--name-field-team-photo,
+	.strategic-plan img,
+	.img-right,
+	.img-left {
+		margin: 0 0 1rem 0;
+		width: 100%;
+		float: none;
+	}
+
+	.page-node-type-out-ed-trip .field--type-image {
+		display: none;
+	}
+	
+	.view-out-ed-trip-schedule .views-field-field-image,
+	.view-project-week .views-field-field-image	{
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
+
+	.d2d-header-img {
+		height: 175px;
+	}
+
+}

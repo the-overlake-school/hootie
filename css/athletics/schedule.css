@@ -1,0 +1,26 @@
+.ui-accordion-header {
+    background: url(../../img/bg.jpg);
+    border: 1px solid #efefef;
+    margin-bottom: .2rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: #356a20;
+    padding-left: 1rem;
+    word-wrap: normal;
+}
+.ui-accordion .ui-accordion-header {
+    padding: 1rem 2rem 1rem 1rem;
+}
+
+table {
+    padding: 0.5rem;
+}
+
+.today {
+    background-color: #fff2ce;
+}
+
+.past {
+    background-color: #ddd;
+    color: #777;
+}

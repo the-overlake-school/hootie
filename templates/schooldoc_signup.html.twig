@@ -1,0 +1,23 @@
+<div id="schooldoc-signup"></div>
+<div id="schooldoc-signup-cancel">
+  <span class="asterisk">*</span>Please let Kent Renno know ASAP if you need to cancel your reservation!
+</div>
+
+<div id="school-doc-signup-agreement">
+  <p>Lots of planning and preparation go into each trip, so please, before you sign up, be SURE that you intend to go. If for some reason, you are not able to attend this trip, please let <a href="mailto:krenno@overlake.org">Kent Renno</a> know as soon as possible.</p>
+  <p>You will also need to fill out and return the <a target="_blank" href="/sites/default/files/documents/out_ed/forms/OutEdPermission.pdf">Trip Permission Form</a>.</p>
+</div>
+
+<script type="text/template" id="signup-template">
+  <% if (!status) { %>
+    <input type="radio" value=<%= id %>><%= name %><br>
+  <% } else { %>
+    <%= name %> &#8212; 
+      <% if(status === 'waitlist') { %>
+        Waitlisted
+      <% } else if(status === 'student') { %>
+        Signed Up
+      <% } %>
+      <span class="asterisk">*</span><br>
+  <% } %>
+</script>

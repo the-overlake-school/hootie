@@ -1,0 +1,10 @@
+.layout-banner-top .block {
+    box-shadow: 0px 0.9rem 0px -0.4rem #cccccc;
+    background: #0c9ad6;
+    margin-bottom: 2rem;
+    padding: .5rem 2rem 2rem;
+}
+
+.layout-banner-top .block a {
+	color: white;
+}

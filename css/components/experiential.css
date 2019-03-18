@@ -1,0 +1,329 @@
+.page-node-type-out-ed-trip #block-hootie-content,
+.page-node-type-project-week-project #block-hootie-content { /* Corrects positioning of floated image */
+    overflow: visible;
+}
+
+#block-schooldocsignupblock {
+    background: #f47d35;
+	box-shadow: 0px 0.9em 0px -.4em #cccccc;
+    color: white;
+	float: right;
+    margin: 0 0 2em 2em;
+    padding: 1em 2em 2em;
+    width: 14em;
+	z-index: 500;
+}
+
+#block-schooldocrosterblock {
+    float: right;
+    clear: right;
+    width: 14em;
+    padding: 1em 2em 2em;
+    background: #efefef;
+    margin: 0 0 2em 2em;
+}
+
+
+.page-node-type-out-ed-trip .field--label-inline .field__label, 
+.page-node-type-out-ed-trip .field--label-inline .field__items,
+.page-node-type-out-ed-trip .field--label-inline .field__label, 
+.page-node-type-out-ed-trip .field--label-inline > .field__item, 
+.page-node-type-out-ed-trip .field--label-inline .field__items,
+.page-node-type-project-week-project .field--label-inline .field__label, 
+.page-node-type-project-week-project .field--label-inline .field__items,
+.page-node-type-project-week-project .field--label-inline .field__label, 
+.page-node-type-project-week-project .field--label-inline > .field__item, 
+.page-node-type-project-week-project .field--label-inline .field__items {
+	float: none;
+    display: inline-block;
+    padding-right: .2em;
+    vertical-align: top;
+}
+
+.page-node-type-out-ed-trip .field--name-field-grade-level .field__item, 
+.page-node-type-out-ed-trip .field--name-field-teacher .field__item {
+	float: none;
+	display: inline;
+}
+
+.page-node-type-out-ed-trip .field--name-field-trip-dates,
+.page-node-type-out-ed-trip .field--name-field-documents {
+    width: calc(100% - 20em);
+}
+
+.page-node-type-out-ed-trip .field--type-image,
+.page-node-type-project-week-project .field--type-image {
+    width: 18em;
+    height: auto;
+    float: right;
+    clear: right;
+}
+
+.page-node-type-out-ed-trip .field--name-field-documents.field--label-inline .field__label {
+	display: block;
+}
+
+.page-node-type-out-ed-trip .field--name-field-documents .field__item,
+.node--type-service-opportunity .field--name-field-service-url .field__item,
+.field--name-field-out-ed-documents .field__item {
+    display: list-item;
+    margin-left: 2em;
+}
+
+.field--name-field-out-ed-documents .file {
+    padding-left: 0;
+}
+
+.page-node-type-out-ed-trip .field--name-field-trip-dates .field__item,
+.page-node-type-project-week-project .field--name-field-pw-date .field__item {
+    display: inline-block;
+}
+
+.field--name-field-trip-dates .field__item:nth-child(2):before,
+.field--name-field-pw-date .field__item:nth-child(2):before {
+	content: "\2013";
+	margin-right: .3em;
+}
+
+.file--application-pdf {
+    background-image: none;
+}
+
+.field--name-field-trip-dates .field--name-field-cost {
+	display: none;
+}
+
+.user-logged-in .field--name-field-trip-dates .field--name-field-cost {
+	display: block;
+}
+
+#block-outedtripregistrationdown {
+    background: #efefef;
+    padding: 1em 2em;
+    margin-bottom: 2em;
+    float: right;
+    width: 14em;
+}
+
+/* OUTDOOR PROGRAM STYLES */
+
+.field--name-field-documents {
+    margin-top: 1em;
+}
+
+.contextual-region.node--type-out-ed-trip .contextual { /* Push edit link out from under signup block */
+    margin-right: 300px;
+    z-index: 1000;
+}
+
+
+/* PROJECT WEEK STYLES */
+/* Selections block css is in the module. */
+
+.page-node-type-project-week-project .field--name-field-teacher .field__item {
+    float: none;
+	margin-left: 2em;
+}
+
+.page-node-type-project-week-project .field--name-field-teacher .field__item::before {
+    content: "\2022";
+    margin-right: .5em;
+}
+
+.page-node-type-project-week-project .field--name-field-pw-special-considerations {
+	margin-top: 1em;
+}
+
+#block-projectweekplacementsblock {
+    background: #0c9ad6;
+    color: white;
+    float: right;
+	margin: 0 0 2em 1em;
+    padding: 0 1em 1em;
+    width: 16em;
+	z-index: 10;
+}
+
+.pw-current-project .ui-state-highlight {
+    background: transparent;
+    border: none;
+	cursor: pointer;
+    margin: 0 0 2em 2em;
+    color: #333;
+    font-weight: bold;
+}
+
+#block-projectweekplacementsblock #pw-placement {
+    color: #333;
+}
+
+.remove {
+    color: #ee4036;
+	cursor: pointer;
+	margin-left: .5em;
+}
+
+/* SERVICE STYLES */
+
+.node--type-service-opportunity .field--type-text-with-summary {
+    clear: both;
+    display: block;
+	margin-top: 3em;
+}
+
+.service-intro {	
+	-webkit-column-count: 2; 
+	-moz-column-count: 2;
+	column-count: 2;
+	margin-bottom: 2em;
+}
+
+td.approved::after { /* checkmark icon on hours summary */
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-style: normal;
+    position: absolute;
+    font-size: 2rem;
+    color: #356a20;
+    z-index: 1;
+}
+
+td.not-approved::after {
+    content: "\f00d";
+    font-family: FontAwesome;
+    font-style: normal;
+    position: absolute;
+    font-size: 2rem;
+    color: #ee4036;
+    z-index: 1;
+}
+
+.response:before {
+    content: 'NOTE FROM BETH:';
+    font-weight: bold;
+	margin-right: .5em;
+}
+
+.response {
+    background: lightyellow;
+    border: 2px solid #fdb813;
+    margin-bottom: 2em;
+    padding: 1em 2em;
+}
+
+#service-opportunities {
+    clear: both;
+}
+
+#service-opportunities-calendar {
+    float: right;
+    margin-left: 2em;
+}
+
+#service-opportunities-calendar a.ui-corner-all {
+    border-bottom: none;
+}
+
+button#show-all {
+    margin: 1em 0 2em 100%;
+    width: 17.6em;
+}
+
+.service-opportunity {
+    border: 1px solid #efefef;
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+#organizations span.edit, 
+#organizations span.delete {
+    color: #356a20;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: .3em;
+    cursor: pointer;
+    border-bottom: 1px dotted;
+}
+
+#organizations span.edit:hover,
+#organizations span.delete:hover {
+	color: #82b456;
+	border-bottom: 1px solid;
+}
+
+#organizations input#filter {
+    margin-bottom: 1em;
+	width: 99%;
+}
+
+/* VIEW styles are in view.css */
+
+
+
+
+/* Make file browser/uploader easier to use - NOT PRESENTLY WORKING 
+
+	.field--type-file .form-type-managed-file .imce-filefield-widget { 
+		margin: 1em 0 2em !important;
+		font-size: 1em !important;
+	}
+
+	.field--type-file .form-type-managed-file label {
+		display: none !important;
+	}
+	
+	.field--type-file .imce-filefield-link::before {
+		content: 'SELECT A FILE:' !important;
+		margin-right: .5em !important;
+		background: none !important;
+		color: #333 !important;
+		font-weight: bold !important;
+	}
+	
+	.field--type-file .form-managed-file::before {
+		content: 'UPLOAD A FILE:' !important;
+		font-size: 1em !important;
+		font-weight: bold !important;
+	}
+
+*/
+
+
+@media only screen and (max-width: 40em) {
+
+	.page-node-type-out-ed-trip .field--name-field-trip-dates,
+	.page-node-type-out-ed-trip .field--name-field-documents,
+	#block-projectweekselectionsblock,
+	#block-projectweekplacementsblock	{
+		width: auto;
+	}
+
+
+	#block-schooldocsignupblock,
+	#block-schooldocrosterblock {
+		float: none;
+		margin: 0 0 2em 0;
+		padding: .5em 2em 1em;
+		width: auto;
+	}
+	
+	#service-opportunities-intro {
+		margin-bottom: 2em;
+		font-weight: bold;
+	}
+	
+	#service-opportunities-calendar {
+		float: none;
+		margin-left: 0;
+	}
+	
+	.ui-datepicker-inline.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+		width: auto;
+	}
+
+	button#show-all {
+		margin-left: 0;
+		width: 100%;
+	}
+
+}

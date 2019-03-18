@@ -1,0 +1,184 @@
+.view .field--name-name { /* Hides taxonomy title (duplicate of view title) */
+    display: none;
+}
+
+.view-footer {
+    clear: both;
+}
+
+/* FILTERING */
+
+.form--inline .form-item {
+    font-weight: bold;
+    padding: 0.4rem 1rem;
+    margin: 0;
+}
+
+.form--inline .form-item label {
+    text-transform: uppercase;
+}
+
+.form--inline .form-actions {
+    clear: none;
+    float: right;
+    margin-top: 0;
+}
+
+select {
+    color: #333333;
+    font-weight: normal;
+}
+
+.view-filters {
+    border: 1px solid #efefef;
+    float: right;
+    padding: 1rem 1rem 0 0;
+    margin-bottom: 2rem;
+}
+
+.view-content {
+    clear: both;
+    display: inline-block;
+    width: 100% /* Fixes service opportunities overflow on mobile */
+}
+
+/* ARTICLE FEEDS */
+
+.view-overlake-news .views-row:nth-of-type(even), /* Position article feeds in columns */
+.view-athletics-news .views-row:nth-child(even),
+.view-arts-news .views-row:nth-child(even),
+.view-library-news .views-row:nth-child(even),
+.view-admission-news .views-row:nth-child(even),
+.view-technology-news .views-row:nth-child(even),
+.view-student-news .views-row:nth-child(even),
+.view-our-spaces .views-row:nth-child(even),
+.view-id-50th_news .views-row:nth-of-type(even) {
+    float: right;
+    width: 47%;
+}
+
+.view-overlake-news .views-row:nth-of-type(odd), /* Position article feeds in columns */
+.view-athletics-news .views-row:nth-child(odd),
+.view-arts-news .views-row:nth-child(odd),
+.view-library-news .views-row:nth-child(odd),
+.view-admission-news .views-row:nth-child(odd),
+.view-technology-news .views-row:nth-child(odd),
+.view-student-news .views-row:nth-child(odd),
+.view-our-spaces .views-row:nth-child(odd),
+.view-id-50th_news .views-row:nth-child(odd) {
+    float: left;
+    width: 47%;
+}
+
+#taxonomy-term-40 { /* Athletics */
+    border-bottom: 2px solid #ffd561;
+    margin-bottom: 2rem;
+}
+
+.athletics-intro {
+    float: left;
+    width: calc(100% - 306px);
+    padding-right: 1rem;
+}
+
+/* RESPONSIVE NEWS FEEDS*/
+
+.responsive-news-feed {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.responsive-news-feed {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.responsive-news-feed li {
+    width: 33%;
+}
+
+@media only screen and (max-width: 86em) {
+    .responsive-news-feed li {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 60em) {
+    .responsive-news-feed li {
+        width: 100%;
+    }
+
+    .responsive-news-feed li .field--name-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* EXPERIENTIAL ED VIEWS */
+
+.view-out-ed-trip-schedule .views-row,
+.view-service-opportunities .views-row,
+.view-project-week .views-row {
+    border: 1px solid #efefef;
+    margin-bottom: 2rem;
+    overflow: auto;
+    padding: 1.5rem 2rem 1rem;
+}
+
+.view-out-ed-trip-schedule .views-label-field-grade-level,
+.view-service-opportunities .views-label-field-service-dates,
+.view-project-week .views-label-field-grade-level,
+.view-project-week .views-label-field-cost {
+    float: left;
+    margin-right: .5rem;
+}
+
+.view-out-ed-trip-schedule .views-field-field-parents {
+    font-style: italic;
+}
+
+.views-field-field-date-depart {
+    float: left;
+    display: flex;
+}
+
+.views-field-field-date-depart::after {
+    content: '-';
+    margin: 0 .3rem;
+}
+
+@media only screen and (max-width: 53.12em) {
+
+    .view-overlake-news .views-row:nth-of-type(even),
+    .view-athletics-news .views-row:nth-child(even),
+    .view-arts-news .views-row:nth-child(even),
+    .view-library-news .views-row:nth-child(even),
+    .view-admission-news .views-row:nth-child(even),
+    .view-technology-news .views-row:nth-child(even),
+    .view-student-news .views-row:nth-child(even),
+    .view-our-spaces .views-row:nth-child(even),
+    .view-id-50th_news .views-row:nth-child(even),
+    .view-overlake-news .views-row:nth-of-type(odd),
+    .view-athletics-news .views-row:nth-child(odd),
+    .view-arts-news .views-row:nth-child(odd),
+    .view-library-news .views-row:nth-child(odd),
+    .view-admission-news .views-row:nth-child(odd),
+    .view-technology-news .views-row:nth-child(odd),
+    .view-student-news .views-row:nth-child(odd),
+    .view-our-spaces .views-row:nth-child(odd),
+    .view-id-50th_news .views-row:nth-child(odd) {
+        float: none;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 40em) {
+
+    .athletics-intro {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+    }
+
+}

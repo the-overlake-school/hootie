@@ -1,0 +1,123 @@
+@-moz-document url-prefix() { /* Force contextual edit link to show in Firefox */
+	.path-academics .trigger.visually-hidden.focusable {
+		clip: unset !important;
+	}
+}
+
+
+.node--type-course,
+#block-views-block-summer-camps-block-1, 
+#block-views-block-summer-camps-block-2,
+#block-views-block-summer-camps-block-3,
+#block-views-block-summer-camps-block-4,
+#block-views-block-summer-camps-block-5,
+#block-views-block-summer-camps-block-6,
+#block-views-block-summer-camps-block-7,
+#block-views-block-summer-camps-block-8,
+#block-views-block-summer-camps-block-9,
+#block-views-block-summer-camps-block-10,
+#block-views-block-summer-camps-block-11,
+#block-views-block-summer-camps-block-12,
+#block-views-block-summer-camps-block-13,
+#block-views-block-summer-camps-block-14 {
+    border: 1px solid #efefef;
+	margin-bottom: 2rem;
+    padding: 1rem 2rem;
+	width: auto;
+}
+
+
+/* CURRICULUM */
+
+.field--name-field-notes {
+    font-weight: bold;
+    font-style: italic;
+	margin-bottom: 1rem;
+}
+
+.field--name-field-prerequisite {
+    color: #f47d35;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.field--name-field-prerequisite a {
+    color: #f47d35;
+}
+
+.field--name-field-prerequisite ul {
+    clear: left;
+	margin-left: 1rem;
+}
+
+.field--name-field-prerequisite::before {
+    content: "Prerequisite:";
+    float: left;
+    margin-right: .5rem;
+}
+
+h2.required::after {
+    content: "REQUIRED";
+    color: #fdb813;
+    font-size: medium;
+	margin-left: .5rem;
+}
+
+h2.inactive::after {
+    content: "NOT OFFERED IN 2019-20";
+    color: #ffd561;
+    font-size: medium;
+	margin-left: .5rem;
+}
+
+h2#latin,
+h2#mandarin,
+h2#spanish { /* Hide jump-to anchors in course description */
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+}
+
+/* SUMMER PROGRAM */
+
+
+.node--type-summer-program-course h3 {
+    margin: .3rem 0;
+}
+
+.field--name-field-grade-level .field__item,
+.field--name-field-teacher .field__item {
+    float: left;
+    margin-right: .5rem;
+}
+
+.node--type-summer-program-course .field {
+    clear: both;
+	line-height: 140%;
+}
+
+.node--type-summer-program-course .field__label {
+    font-size: 1rem;
+	text-transform: none;
+}
+
+.node--type-summer-program-course .field--name-body {
+    line-height: 180%;
+	margin-top: 2rem;
+}
+
+.node--type-summer-program-course .button {
+    float: right;
+}
+
+.node--type-summer-program-course { /* Corrects positioning of floated button */
+	overflow: hidden;
+}
+
+.closed * {
+    color: #aaa;
+}
+
+.closed h3:after {
+    content: '*Camp is full'
+}

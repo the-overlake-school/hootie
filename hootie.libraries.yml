@@ -1,0 +1,58 @@
+global-css:
+  css:
+    base:
+      css/base/typography.css: {}
+      css/base/elements.css: {}
+      //fonts.googleapis.com/css?family=Merriweather:900,900italic|Open+Sans:400,700,400italic,700italic|Open+Sans+Condensed:300: { type: external }
+    component:
+      css/components/article.css: {}
+      css/components/banner.css: {}
+      css/components/blocks.css: {}
+      css/components/breadcrumb.css: {}
+      css/components/buttons.css: {}
+      css/components/calendars.css: {}
+      css/components/course.css: {}
+      css/components/forms.css: {}
+      css/components/experiential.css: {}
+      css/components/header.css: {}
+      css/components/images.css: {}
+      css/components/login.css: {}
+      css/components/menu.css: {}
+      css/components/messages.css: {}
+      css/components/paragraphs.css: {}
+      css/components/teaser.css: {}
+      css/components/team.css: {}
+      css/components/view.css: {}
+      css/components/widgets.css: {}
+    layout:
+      css/layout/doors-to-discovery.css: {}
+      css/layout/layout.css: {}
+    
+global-js:
+  js:
+    js/hootie.js: {}
+    js/jquery.colorbox-min.js: {}
+    https://use.fontawesome.com/de26e6a57d.js: { type: external }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/underscore
+    - core/jquery.ui.dialog
+dashboard-static:
+  js:
+    js/flexbox-packery.js: {}
+    '//unpkg.com/packery@2/dist/packery.pkgd.min.js': { type: external, minified: true }
+frontpage:
+  js:
+    js/front/video.js: {}
+  css:
+    component:
+      css/front/video.css: {}
+athletics.schedules:
+  js:
+    js/athletics/schedule.js: {}
+  css:
+    component:
+      css/athletics/schedule.css: {}
+  dependencies:
+    - core/jquery.ui.accordion

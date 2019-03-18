@@ -1,0 +1,98 @@
+/* This contains article-specific styles.  Paragraph styles, for pages and articles, are in paragraphs.css */
+
+.node--view-mode-full .node__submitted {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Faculty Staff Team Pages (Admissions and Development) */
+
+
+.team-page {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.team-page .contact {
+    width: 48%;
+    margin-bottom: 2rem;
+}
+
+.team-page .contact:nth-of-type(2n-1) {
+    margin-right: 2rem;
+}
+
+.team-page .contact p {
+    margin: 0;
+    min-width: 240px;
+}
+
+.team-page .f-justify-flexible {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.team-page .photo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    min-height: 150px;
+    min-width: 100px;
+    margin-right: 1rem;
+}
+
+.team-page .photo-sabino {
+    background-image: url("/sites/default/files/pictures/faculty-staff/admissions/lou-sabino-2018.jpg");
+}
+
+.team-page .photo-marks {
+    background-image: url("/sites/default/files/pictures/faculty-staff/admissions/margaret-marks-2018.jpg");
+}
+
+.team-page .photo-park {
+    background-image: url("/sites/default/files/pictures/faculty-staff/admissions/jasmine-park-2018.jpg");
+}
+
+.team-page .photo-sutherlin {
+    background-image: url("/sites/default/files/pictures/faculty-staff/admissions/teron-sutherlin-2018.jpg");
+}
+
+.team-page .photo-basham {
+    background-image: url("/sites/default/files/pictures/faculty-staff/technology/david-basham-2018.jpg");
+}
+
+.team-page .photo-heath {
+    background-image: url("/sites/default/files/pictures/faculty-staff/technology/jay-heath-2018.jpg");
+}
+
+.team-page .photo-johnson {
+    background-image: url("/sites/default/files/pictures/faculty-staff/technology/sharon-johnson-2018.jpg");
+}
+
+.team-page .photo-morse {
+    background-image: url("/sites/default/files/pictures/faculty-staff/technology/greg-morse-2018.jpg");
+}
+
+.team-page .photo-page {
+    background-image: url("/sites/default/files/pictures/faculty-staff/technology/mollie-page-2018.jpg");
+}
+
+.team-page .photo-sasidharan {
+    background-image: url("/sites/default/files/pictures/faculty-staff/technology/subha-sasidharan-2018.jpg");
+}
+
+.team-page .photo-yeager {
+    background-image: url("/sites/default/files/pictures/faculty-staff/technology/sam-yeager-2018.jpg");
+}
+
+@media only screen and (max-width: 89em) {
+
+    .team-page .contact {
+        width: 100%;
+    }
+
+    .team-page .f-justify-flexible {
+        justify-content: center;
+    }
+}

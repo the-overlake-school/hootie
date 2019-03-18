@@ -1,0 +1,510 @@
+/**
+ * Core, site-wide elements.  See Components folder for unique element styles.
+ */
+
+/* COLORS */
+.lightgreen {color: #82b456;}
+.green {color: #356a20;}
+.yellow {color: #ffd561;}
+.gold {color: #fdb813;}
+.orange {color: #f47d35;}
+.red {color: #ee3046;}
+.blue {color: #0c9ad6;}
+.lightgrey {color: #efefef;} /* also lighter grey #f9f9f9 */
+.darkgrey {color: #ccc;}
+
+/* MODAL */
+
+.ui-widget-overlay {
+    background: #000;
+    opacity: .70;
+    filter: Alpha(Opacity=70);
+	z-index: 600;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    font-weight: bold !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.ui-dialog {
+    border: 2px solid #333 !important;
+    box-shadow: 0px 20px 20px -10px #333;
+    background: url('../../img/bg.jpg') !important;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-radius: 0;
+}
+
+.ui-widget-content a {
+    outline: none;
+}
+
+
+.layout-content {
+	line-height: 180%;
+}
+
+.right {
+	float: right;
+	padding: 0 0 2rem 2rem;
+}
+
+.left {
+	float: left;
+	padding: 0 2rem 2rem 0;
+}
+
+.center {
+	text-align: center;
+}
+
+.two-col {
+    float: left;
+    width: 45%;
+    margin-right: 1rem;
+}
+
+p {
+	margin: 1rem 0;
+}
+
+.layout-banner-bottom p {
+    margin: 1.2rem 0;
+}
+
+.feed-icon {
+  display: block;
+  margin: 25px 0 0 0;
+}
+
+a.feed-icon {
+    border-bottom: none;
+	clear: both;
+}
+
+img a,
+a.img {
+	border-bottom: none;
+}
+
+.block img {
+	height: auto;
+	width: 100%;
+}
+
+a[href$=".pdf"]::after {
+	color: #f47d35;
+	content: "PDF";
+	font-size: 0.6em;
+	padding: 0.6em;
+}
+
+a[href$=".doc"]::after,
+a[href$=".docx"]::after {
+	color: #f47d35;
+	content: "DOCX";
+	font-size: 0.6em;
+	padding: 0.6em;
+}
+
+a[href$=".xlsx"]::after,
+a[href$=".xls"]::after {
+	color: #f47d35;
+	content: "XLSX";
+	font-size: 0.6em;
+	padding: 0.6em;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0 0 0.25em 1em; /* LTR */
+}
+
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding: 0 1em 0.25em 0;
+}
+
+ol ol,
+ul ul {
+  margin: 0;
+  padding: 0 0 0.25em 1em; /* LTR */
+}
+
+[dir="rtl"] ol ol,
+[dir="rtl"] ul ul {
+  padding: 0 1em 0.25em 0;
+}
+
+hr {
+    color: #ffd561;
+    border: 1px solid;
+}
+
+#sidenav-content ul.contextual-links a { /* Make edit links visible where <a> text is white */
+    color: black;
+}
+
+a[href^=tel] {
+	border-bottom: none;
+	text-decoration: none;
+}
+
+a[href^=tel]:before {
+    content: "\f095";
+    font-family: FontAwesome;
+    margin-right: .5rem;
+    font-size: .9rem;
+}
+
+a[href^=mailto]:before,
+.field--name-field-coach-info a[href^=mailto]:before {
+    content: "\f003";
+    font-family: FontAwesome;
+    margin-right: .5rem;
+    font-size: .8rem;
+}
+
+/* Don't show email icon */
+.region-content .block-supplement a[href^=mailto]:before,
+.field--name-field-paragraphs a[href^=mailto]:before,
+.node__content a[href^=mailto]:before,
+.ui-widget-content a[href^=mailto]:before,
+.webform-confirmation a[href^=mailto]:before,
+.view-service-opportunities a[href^=mailto]:before {
+	display: none;
+}
+
+label,
+.views-label {
+    font-weight: bold;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	margin-right: .5rem;
+}
+
+.toggle-trigger {
+    cursor: pointer;
+    font-weight: bold;
+    color: #356a20;
+	padding-left: 1rem;
+}
+
+.toggle-target {
+    display: none;
+	margin: 0;
+	padding: 0 1rem 1rem;
+}
+
+/* Errors */
+.img-error {
+    width: 10%;
+    max-width: 75px;
+}
+
+/* Responsive Flexbox Table */
+
+.flex-table {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.flex-table .body p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.flex-table .body p:nth-of-type(2n) {
+    background-color: whitesmoke;
+}
+
+.flex-table, .flex-table div {
+    padding: 10px;
+}
+
+.flex-table div {
+    flex-grow: 1;
+}
+
+.flex-table .head {
+    background-color: #356a20;
+    color: white;
+    text-align: center;
+    max-height: 30px;
+}
+
+.flex-table .head, .flex-table .body {
+    border: 2px solid #356a20;
+    border-top: none;
+}
+
+/* Responsive Button pair to match Google Material Design */
+.button-pair {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+/* Event-closed sign for Owls Night Out and Other events */
+div.complete:before {
+    content: 'Event has passed. Thank you for joining us!';
+    color: white;
+    background: rgba(130, 180, 86, 0.85);
+    padding: 0.5rem 1rem;
+    position: absolute;
+    left: 15%;
+    top: 40%;
+    margin-right: 2rem;
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+
+div.complete {
+    position: relative;
+    background-color: whitesmoke;
+    padding: 0.5rem 1.5rem;
+}
+
+div.complete p {
+    color: #777;
+}
+
+/* Complex Generic layout classes */
+
+.two-column-layout, .three-column-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.three-column-layout div {
+    width: 30%;
+    min-width: 150px;
+    padding: 0 0.5rem;
+}
+
+.layout-content .three-column-layout ul {
+    margin-left: 0;
+}
+
+.two-column-layout p {
+    width:50%;
+    text-align:center;
+    margin-bottom:0;
+}
+
+/* Generic layout classes */
+
+.flex {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.f-justify-betw {
+    justify-content: space-between;
+}
+
+.f-justify-center {
+    justify-content: center;
+}
+
+.f-justify-end {
+    justify-content: flex-end;
+}
+
+.f-justify-start {
+    justify-content: flex-start;
+}
+
+.f-align-center {
+    align-content: center;
+}
+
+.f-align-i-center {
+    align-items: center;
+}
+
+.f-align-start {
+    align-content: flex-start;
+}
+
+.f-align-i-start {
+    align-items: flex-start;
+}
+
+.f-align-end {
+    align-content: flex-end;
+}
+
+.f-align-i-end {
+    align-items: flex-end;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.m-1 {
+    margin: 1rem !important;
+}
+
+.m-2 {
+    margin: 2rem !important;
+}
+
+.m-3 {
+    margin: 3rem !important;
+}
+
+.m-0-auto {
+    margin: 0 auto !important;
+}
+
+.mb-1 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 2rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 3rem !important;
+}
+
+.mt-1 {
+    margin-top: 1rem !important;
+}
+
+.mt-2 {
+    margin-top: 2rem !important;
+}
+
+.mt-3 {
+    margin-top: 3rem !important;
+}
+
+.mr-1 {
+    margin-right: 1rem !important;
+}
+
+.mr-2 {
+    margin-right: 2rem !important;
+}
+
+.mr-3 {
+    margin-right: 3rem !important;
+}
+
+.ml-1 {
+    margin-left: 1rem !important;
+}
+
+.ml-2 {
+    margin-left: 2rem !important;
+}
+
+.ml-3 {
+    margin-left: 3rem !important;
+}
+
+.mx-1 {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+}
+
+.mx-2 {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+}
+
+.mx-3 {
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+}
+
+.my-1 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.my-2 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.my-3 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* often helps to make outlines and borders
+on the edge of the rendered area not get cut off */
+.w-99 {
+    width: 99%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+@media only screen and (max-width: 65em) {
+    .three-column-layout {
+        flex-direction: column;
+    }
+
+    .three-column-layout div {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .three-column-layout div:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    .button-pair {
+        flex-direction: column-reverse;
+        min-height: 150px;
+    }
+}

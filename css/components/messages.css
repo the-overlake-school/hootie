@@ -1,0 +1,26 @@
+.messages--status {
+	border-left: 1px solid #c9e1bd;
+	box-shadow: none;
+}
+
+.color-warning {
+	border-left: 1px solid #f4daa6;
+	box-shadow: none;
+}
+.color-error {
+	border-left: 1px solid #f9c9bf;
+	box-shadow: none;
+}
+
+.messages--warning {
+    background-color: #f47d35;
+    background-image: none;
+    border: #f47d35 solid 2px;
+    color: white;
+    box-shadow: 0px 0.9rem 0px -0.4rem #cccccc;
+}
+
+.messages--warning a {
+    color: white;
+    text-transform: uppercase;
+}

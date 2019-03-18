@@ -1,0 +1,175 @@
+<?php
+
+use Drupal\file\Entity\File;
+use Drupal\Core\Url;
+use Symfony\Component\Yaml\Yaml;
+
+function hootie_preprocess_breadcrumb(&$variables){
+  if($variables['logged_in']){
+    $variables['breadcrumb'][0]['url'] .= 'myoverlake';
+  }
+}
+    
+    
+function hootie_menu_sections(){
+  return [
+    'about' => 'about-us',
+    'academics' => 'academics',
+    'admission' => 'admission',
+    'students' => 'student-life',
+    'support' => 'get-involved'
+  ];
+}
+
+function hootie_current_section(){
+  $section = &drupal_static(__FUNCTION__);
+  if(!isset($section)){
+    $section = '';
+    $mainSections = hootie_menu_sections();
+    $url = Url::fromRoute('<current>')->toString();    
+    foreach($mainSections as $key => $mainSection){
+      if(strpos($url,$key) !== FALSE){
+        $section = $mainSection;
+        break;
+      }
+    }
+  }
+  return $section;
+}
+
+function hootie_preprocess_paragraph__summer_program_course_instance(&$variables) {
+   $variables['isClosed'] = $variables['content']['field_isclosed'][0]['#markup'] == 'Open' ? 0 : 1;
+}
+
+function hootie_preprocess_block__system_menu_block(&$variables){
+
+    $id = $variables['derivative_plugin_id'];
+    $section = hootie_current_section();
+    if($id == $section){
+      $variables['attributes']['class'][] = 'active';   
+    }
+
+}
+
+function hootie_preprocess_node__athletics_program(&$vars){
+  $vars['#attached']['library'][] = 'hootie/athletics.schedules';
+}
+
+function hootie_preprocess_node__course(&$vars){
+  $class = [];
+  if($vars['node']->field_required->value){
+    $class[] = 'required';
+  }
+  if(!$vars['node']->field_active->value){
+    $class[] = 'inactive';
+  }
+  $vars['title_attributes']['class'] = $class;
+}
+
+function hootie_preprocess_page(&$variables) {
+  $variables['#attached']['drupalSettings']['hootie'] = [];
+  if($variables['is_front']){
+    $variables['#attached']['library'][] = 'hootie/frontpage';
+    hootie_set_videos($variables);
+  } else {
+    $variables['header_images'] = hootie_header_images();
+  }
+}
+
+function hootie_preprocess_field__block_content__dashboard(&$variables) {
+  $variables['#attached']['library'][] = 'hootie/dashboard-static';
+}
+
+function hootie_preprocess_region__dashboard_static(&$variables) {
+  $variables['#attached']['library'][] = 'hootie/dashboard-static';
+}
+
+function hootie_theme(){
+  return [
+    'hootie_header' => [
+      'template' => 'header',
+      'variables' => [
+        'images' => [],
+      ],
+    ],
+    'hootie_staff' => [
+      'template' => 'hootie_staff',
+      'variables' => [
+        'images' => [],
+      ],
+    ],
+  ];
+}
+
+function hootie_header_images(){
+  $regions = ['academics','arts','athletics','discovery'];
+  $request = Drupal::request();
+  $path = $request->getPathInfo();
+
+  $intersect = array_intersect($regions,explode('/',$path));
+  $region = reset($intersect);
+
+  $directory = 'headers';
+
+  if($region){
+    $query = db_select('file_managed','fm')
+      ->fields('fm',['fid','filename'])
+      ->condition('uri','%' . db_like('public://headers/' . $region) . '%','LIKE')
+      ->range(0,3);
+    if($region == 'discovery'){
+      $query->orderBy('filename');
+    } else {
+      $query->orderRandom();
+    }
+
+    $results = $query->execute()->fetchCol();
+
+  } else {
+    // Mix up the regions, but don't use discovery
+    array_pop($regions);
+    shuffle($regions);
+    // Select three random pictures from different regions
+    $q = [];
+    foreach($regions as $key => $region){
+      $q[] = '(SELECT fid FROM file_managed WHERE uri LIKE \'public://headers/' . $regions[$key] . '%\'  ORDER BY RAND() LIMIT 1)';
+    }
+    $query = db_query(implode(' UNION ',$q));
+    $results = $query->fetchCol();
+    
+  }
+
+
+  $images = File::loadMultiple($results);
+
+  $srcs = [];
+  foreach($images as $image){
+    $srcs[] = $image->url();
+  }
+
+  return $srcs;
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * @param array $suggestions
+ * @param array $variables
+ */
+ 
+function hootie_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+function hootie_set_videos(&$variables){
+
+  $videos = [];
+  $path = dirname(__FILE__) . '/video/video.yml';
+
+  if(file_exists($path)){
+    $videos = Yaml::parse(file_get_contents($path));
+  } 
+  $variables['#attached']['drupalSettings']['hootie']['videos'] = $videos;
+
+}

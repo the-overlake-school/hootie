@@ -1,0 +1,325 @@
+/**
+ * This document defines how text, headers, and hyperlinks  
+ * are displayed on the website.
+ * - General
+ * - Headers
+ * - Hyperlinks	
+ * This theme uses REMs for font sizing text, and EMs for spacing. 
+ * Paragraph and additional text styling is included in elements.css.
+*/
+
+
+/* GENERAL */
+
+html {
+	font-size: 100%;
+}
+
+.layout-banner-top,
+.layout-banner-bottom {
+    color: white;
+	font-size: 1.3rem;
+    font-weight: bold;
+}
+
+body {
+	color: #333333;
+	line-height: 1.5;
+	word-wrap: break-word;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+}
+
+.button {
+	font-weight: bold;
+}
+
+.field--name-field-caption { /* Image captions */
+    font-style: italic;
+}
+
+.form-note { /* Forms Portal */
+    font-style: italic;
+}
+
+.note {
+	font-weight: bold;
+	color: #f74d35;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.callout {
+	background-color: #fff2ce;
+	border: 2px solid #ffd561;
+	padding: 1rem;
+	margin: 1rem;
+}
+
+.callout-border-left {
+	background-color: #fff2ce;
+	border-left: 4px solid #ffd561;
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+.callout-border-left h3, .callout-border-left h4 {
+	margin-bottom: 0;
+}
+
+p.deemphasize {
+	opacity:0.7;
+}
+
+/* LEFT NAV */
+
+.block-menu h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+/* HEADERS */
+
+h1 {
+	color: #356a20;
+	font-family: 'Merriweather', serif;	
+	font-size: 36px;
+	font-size: 2rem;
+	line-height: 120%;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+.field--name-field-coach-info .field__label { /* display as H2 */
+    text-transform: none;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.layout-banner-top h2,
+.layout-banner-bottom h2 {
+	color: white;
+}
+
+h3,
+.field__label {
+    text-transform: uppercase;
+    font-size: 1rem;
+	font-weight: bold;
+}
+
+/* HYPERLINKS */
+
+a,
+a.link,
+.ui-widget-content a,
+.login-link {
+	border-bottom: 1px dotted;
+	color: #356a20;
+	cursor: pointer;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus,
+.link:hover,
+.link:active,
+.link:focus,
+.login-link:hover {
+	color: #82B456;
+	border-bottom-style: solid;
+	text-decoration: none;
+}
+
+.messages .login-link {
+	color: white;
+}
+
+h1 a,
+h2 a,
+a.img,
+#flyouts li a {
+  border-bottom: none;
+}
+
+#flyouts {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.dashboard h2 a {
+    border-bottom: 1px dotted;
+}
+
+.region-footer a, /* make hyperlinks white on green footer background */
+.block-contact a, /* make email address white in contact block */
+.field--name-field-coach-info a { /* make email address white in coaches field */
+    color: white;
+    font-weight: normal;
+}
+
+.region-footer a:hover,
+.block-contact a:hover,
+.field--name-field-coach-info a:hover {
+	color: #efefef;
+}
+
+.layout-sidebar-first ul.menu ul.menu ul.menu li a {
+	font-weight: normal;
+}
+
+.question {
+	font-weight: 700;
+}
+
+/* /about/discovery Discovery Campaign slanted quote styling */
+
+.quote-border {
+	width: 3px;
+	height: 145px;
+	transform: rotate(30deg);
+	margin-top: -0.5rem;
+	background-image: url("../../img/discovery_line_straight.png");
+	background-size: cover;
+	background-position: center;
+	shape-outside: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+}
+
+.quote-border-small {
+	height: 120px;
+}
+
+.quote-border-med {
+	height: 170px;
+	marginp-right: -1rem; /* Move closer to text */
+	margin-top: -1.5rem; /* Vertically center with text */
+}
+
+.quote-border-large {
+	height: 220px;
+	margin-right: -3rem; /* Move closer to text */
+	margin-top: -3.5rem; /* Vertically center with text */
+}
+
+.quote-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1000px;
+	margin: 2rem auto;
+	font-size: 1.15rem;
+}
+
+.quote-container p {
+	max-width: 700px;
+}
+
+.quote-container .shape-left-large + p {
+	max-width: 800px;
+}
+
+.quote {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0;
+	margin-top: 2rem;
+	text-align: justify;
+}
+
+.shape-left {
+	float: left;
+	shape-outside: polygon(0 0, 100% 0, 0% 100%, 0 100%);
+	width: 78px;
+	height: 130px;
+}
+
+.shape-left-med {
+	width: 114px;
+	height: 190px;
+}
+
+.shape-left-large {
+	width: 150px;
+	height: 250px;
+}
+
+.quote-attrib {
+	font-style: italic;
+	margin: 1.5rem 1rem 1.5rem 0;
+}
+
+.quote-attrib::before {
+	content: '\2014';
+	/* em-dash */
+	align-self: left;
+	margin-left: 0;
+}
+
+.quote-img {
+	min-width: 150px;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border-radius: 50%;
+	background-image: url('https://www.overlake.org/sites/default/files/default_images/default.gif');
+	background-position: 60% 27%;
+	background-size: cover;
+	border: 6px solid #82b456;
+	margin-right: 5rem;
+	margin-top: -2rem;
+}
+
+.discovery {
+	color: #7773b6;
+}
+
+.financial-aid {
+	color: #43beac;
+}
+
+.math-sci {
+	color: #eb7923;
+}
+
+
+@media only screen and (max-width: 61em) {
+
+	.region-footer {
+		font-weight: 100;
+	}
+
+	.quote-border, .shape-left {
+		display: none;
+	}
+
+	.quote {
+		flex-direction: column;
+	}
+
+	.quote-img {
+		margin-right: 0;
+		margin-top: 0;
+	}
+
+}
+
+@media only screen and (max-width: 30em) {
+	
+	.region-footer {
+		text-align: center;
+	}
+
+}	

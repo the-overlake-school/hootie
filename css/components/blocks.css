@@ -1,0 +1,709 @@
+#block-sportsinformation{
+  clear: both;
+  text-align: center;
+	background-color: #fdb813;
+}
+
+#block-athleticstwitter{
+  float: left;
+}
+
+/* Slideover Tile Flexbox */
+
+.slideover-tile {
+    height: 300px;
+    width: 30%;
+    min-width: 250px;
+    overflow: hidden;
+    margin: 0.5rem 0.5rem;
+    text-align: center;
+    font-size: 15px;
+    line-height: 22px;
+    position: relative;
+}
+
+.slideover-tile.featured {
+    width: 60%;
+    min-width: 506px;
+    border: 5px solid black;
+}
+
+.slideover-tile p {
+    margin-top: 0;
+}
+
+.slideover-tile .text {
+    text-align: left;
+}
+
+.slideover-tile .body, .slideover-tile .body-bg, .slideover-tile .image, .slideover-tile .title, .slideover-tile .image::before {
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.slideover-tile .body {
+    z-index: 4;
+    padding: 2rem;
+    color: white;
+    transform: scale(1, 0.5) translate(0, 150%);
+    transition: all 0.4s cubic-bezier(0.19, 0.45, 0.29, 0.92);
+}
+
+.slideover-tile .body-bg {
+    z-index: 3;
+    background-color: #356a20;
+    opacity: 0.9;
+    transform: scale(1, 0.5) translate(0, 150%);
+    transition: all 0.2s cubic-bezier(0.19, 0.45, 0.29, 0.92);
+}
+
+.slideover-tile .title {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    padding: 2rem;
+    opacity: 1;
+    line-height: 30px;
+    transition: all 0.3s linear;
+}
+
+.slideover-tile .title h2 {
+    margin-bottom: 0;
+}
+
+.slideover-tile .image::before {
+    content: '';
+    z-index: 1;
+    background: linear-gradient(rgba(26,53,16,0), rgba(26,53,16,0), rgba(26,53,16,0),rgba(26,53,16,0.50),rgba(26,53,16,0.75));
+}
+
+.slideover-tile .image {
+    background-size: cover;
+    background-position: center;
+}
+
+.slideover-tile:hover .body, .slideover-tile:hover .body-bg {
+    transform: scale(1, 1) translate(0, 0);
+}
+
+.slideover-tile:hover .title {
+    opacity: 0;
+}
+
+.slideover-tile a {
+    color: #fdb813;
+}
+
+.slideover-tile .button-inline {
+    margin: 0 auto;
+    float: none;
+    width: 100px;
+}
+
+/* Regular Flexbox fields */
+
+.field-flexbox {
+    display: flex;
+    /* below two are specific to Curriculum View Header implementation */
+    width: 50%;
+    float: right;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.field-flexbox .flexbox-child .field__item {
+    width: 100%;
+}
+
+.region-content .block-contact,
+.field--name-field-coach-info {
+    background: #333333;
+    padding: 1rem 2rem;
+    color: white;
+    margin-top: 2rem;
+    width: 18rem;
+}
+
+.field--name-field-coach-info {
+	float: left;
+	padding-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.region-content .block-supplement {
+    background: white;
+	border: 2px solid #ffd561;
+    color: #333333;
+    display: inline-block;
+    float: right;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    width: calc(100% - 29rem);
+}
+
+.region-footer a[href^=tel],
+.region-content .block-contact a[href^=tel],
+.field--name-field-coach-info a[href^=tel] {
+	color: white;
+}
+
+.region-content .block-contact a[href^=mailto],
+.field--name-field-coach-info a[href^=mailto],
+.region-footer a[href^=mailto] {
+	border-bottom: none;
+}
+
+.region-content .block-contact a[href^=mailto]:hover,
+.field--name-field-coach-info a[href^=mailto]:hover,
+.region-footer a[href^=mailto]:hover,
+.region-footer a[href^=tel]:hover,
+.region-content .block-contact a[href^=tel]:hover,
+.field--name-field-coach-info a[href^=tel]:hover {
+	border-bottom: 1px dotted;
+	color: #efefef;
+}
+
+#block-hootie-help {
+    background: hotpink;
+    padding: 1rem ;
+}
+
+#block-footerresources {
+	text-align: center;
+}
+
+
+
+/* DASHBOARDS */
+
+.dashboard h2, .region-flex-box .block h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.dashboard #dashboard h2 {
+    margin-top: 0;
+}
+
+.region-flex-box .block h2 {
+    margin-top: 1rem;
+}
+
+.read-more {
+    float: right;
+}
+
+.read-more a {
+	border-bottom: none;
+	color: #ffd561;
+}
+
+.read-more a:hover {
+	border-bottom: 1px dotted;
+}
+
+.dashboard .block, .region-flex-box .block, .flexbox-packery .block {
+    background: white;
+    border: 2px solid #ffd561;
+    padding: 0 1rem 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.dashboard .block  {
+    box-shadow: 0 18px 0 -10px #efefef;
+    margin-bottom: 0.5rem;
+}
+
+.flexbox-packery.block-dashboard .block {
+    width: 42%;
+    border-color: #82b456;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.dashboard .block-contact {
+    display: block;
+}
+
+#block-tandemcalletterday, /* Highlight block with gold background */
+#block-alumnireunion {
+    background: #ffd561;
+    color: white;
+    padding: 0;
+}
+
+#block-alumnireunion a:hover {
+    color: #f47d35;
+	text-decoration: none;
+}
+
+#block-alumninetworking .icons a {
+    border-bottom: none;
+}
+
+#block-alumnifacebookfeed {
+    padding: 0;
+}
+
+#block-alumnifacebookfeed iframe {
+    margin: -1rem 0 -1.5rem;
+	width: 100%;
+}
+
+
+#block-contactfrontoffice,
+#block-contactchristianfulghum {
+    background: #333333;
+    color: white;
+}
+
+#block-contactfrontoffice a,
+#block-alumnireunion a {
+	color: white;
+}
+
+#block-alumnireunion a:hover {
+    border-bottom: none;
+    color: #f47d35;
+}
+
+#block-contactfrontoffice a:hover,
+#block-alumnireunion a:hover {
+	color: #efefef;
+}
+
+#block-contactfrontoffice a[href^=mailto],
+#block-contactchristianfulghum a[href^=mailto] {
+	border-bottom: none;
+}
+
+#block-contactfrontoffice a[href^=mailto],
+#block-contactchristianfulghum a[href^=mailto],
+#block-contactfrontoffice a[href^=tel],
+#block-contactchristianfulghum a[href^=tel] {
+	font-weight: normal;
+}
+
+#block-contactfrontoffice a[href^=mailto]:hover,
+#block-contactchristianfulghum a[href^=mailto]:hover,
+#block-contactfrontoffice a[href^=tel]:hover,
+#block-contactchristianfulghum a[href^=tel]:hover {
+	border-bottom: 1px dotted;
+}
+
+.cal-event { /* For all in-page Tandem feeds */
+    margin-bottom: 1rem;
+    font-weight: bold;
+	text-align: center;
+}
+
+#block-views-block-overlake-news-block-1,
+#block-alumnievents,
+#block-calendarsschedules {
+	padding: 0 1rem 1rem;
+}
+
+#sidenav-content .view-overlake-news .view-content div.views-row:nth-of-type(even),
+#sidenav-content .view-overlake-news .view-content div.views-row:nth-of-type(odd),
+.dashboard .view-overlake-news .view-content div.views-row:nth-of-type(even),
+.dashboard .view-overlake-news .view-content div.views-row:nth-of-type(odd) {
+    background: #333333;
+    float: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.dashboard .views-field.views-field-title a,
+.dashboard .views-field-created {
+    color: white;
+}
+
+.dashboard .views-field.views-field-title {
+    padding: 0 1rem;
+}
+
+#sidenav-content .views-field-created,
+.dashboard .views-field-created {
+    padding-bottom: .5rem;
+}
+
+.dashboard #block-alumnifacebookfeed {
+    padding: 0;
+}
+
+#block-myoverlakestaffemergencyblock, #block-myoverlakeoffcampusemergency{
+    /* redundant - remove after dashboard is implemented */
+    border-color: #ee4036;
+}
+
+#block-myoverlakestaffemergencyblock h2, #block-myoverlakeoffcampusemergency h2 {
+    /* redundant - remove after dashboard is implemented */
+	color: #ee4036;
+}
+
+/* SLIDE NAV */
+
+#sidenav-content a {
+    color: white;
+}
+
+/* Menu */
+
+#block-mobile-search {
+	display: none !important;
+}
+
+#sidenav-content .navigation h2::after {
+	content: none;
+}
+
+#block-myoverlake {
+    background: #ffd561;
+    border: 2px solid;
+	text-align: center;
+}
+
+#block-myoverlake a {
+	border-bottom: none;
+	padding: 1rem 5rem;
+}
+
+ul.quicklinks {
+	list-style: none;
+	padding: 0;
+}
+
+#sidenav-content ul.quicklinks {
+    margin-top: 1rem;
+}
+
+#sidenav-content ul.quicklinks li {
+    background: #333333;
+    width: 48%;
+    height: 3.5rem;
+    text-align: center;
+    font-size: 0.7rem;
+    margin-bottom: .6rem;
+}
+
+#sidenav-content ul.quicklinks li:hover {
+    background: #356a20;
+}
+
+#sidenav-content ul.quicklinks li:nth-of-type(odd) {
+	float: left;
+}
+
+#sidenav-content ul.quicklinks li:nth-of-type(even) {
+	float: right;
+}
+
+#sidenav-content ul.quicklinks a {
+    border-bottom: none;
+    display: block;
+    padding: 1.1rem .6rem 1.5rem 3.5rem;
+}
+
+#sidenav-content ul.quicklinks li.staff a,
+#sidenav-content ul.quicklinks li.directory a,
+#sidenav-content ul.quicklinks li.veracross a {
+    padding: .7rem .6rem 1.5rem 3.5rem;
+}
+
+#sidenav-content ul.quicklinks li.calendar {
+    background: #333333 url(../../img/events.png) no-repeat 10% 50%;
+    background-size: 25%;
+}
+
+#sidenav-content ul.quicklinks li.calendar:hover {
+    background: #356a20 url(../../img/events.png) no-repeat 10% 50%;
+    background-size: 28%;
+}
+
+#sidenav-content ul.quicklinks li.canvas {
+	background: #333333 url(../../img/canvas.png) no-repeat 10% 50%;
+    background-size: 27%;
+}
+
+#sidenav-content ul.quicklinks li.canvas:hover {
+    background: #356a20 url(../../img/canvas.png) no-repeat 10% 50%;
+    background-size: 30%;
+}
+
+#sidenav-content ul.quicklinks li.donate {
+    background: #333333 url(../../img/donate.png) no-repeat 10% 50%;
+    background-size: 27%;
+}
+
+#sidenav-content ul.quicklinks li.donate:hover {
+    background: #f47d35 url(../../img/donate.png) no-repeat 10% 50%;
+    background-size: 30%;
+}
+
+
+#sidenav-content ul.quicklinks li.employment {
+    background: #333333 url(../../img/employment.png) no-repeat 10% 50%;
+    background-size: 27%;
+}
+
+#sidenav-content ul.quicklinks li.employment:hover {
+    background: #356a20 url(../../img/employment.png) no-repeat 10% 50%;
+    background-size: 30%;
+}
+
+
+#sidenav-content ul.quicklinks li.staff {
+    background: #333333 url(../../img/staff.png) no-repeat 10% 50%;
+    background-size: 27%;
+}
+
+#sidenav-content ul.quicklinks li.staff:hover {
+    background: #356a20 url(../../img/staff.png) no-repeat 10% 50%;
+    background-size: 30%;
+}
+
+
+#sidenav-content ul.quicklinks li.directory {
+    background: #333333 url(../../img/directory.png) no-repeat 10% 50%;
+    background-size: 27%;
+}
+
+#sidenav-content ul.quicklinks li.directory:hover {
+    background: #356a20 url(../../img/directory.png) no-repeat 10% 50%;
+    background-size: 30%;
+}
+
+
+#sidenav-content ul.quicklinks li.library {
+    background: #333333 url(../../img/library.png) no-repeat 10% 50%;
+    background-size: 30%;
+}
+
+#sidenav-content ul.quicklinks li.library:hover {
+    background: #356a20 url(../../img/library.png) no-repeat 10% 50%;
+    background-size: 33%;
+}
+
+#sidenav-content ul.quicklinks li.lunch {
+    background: #333333 url(../../img/lunch.png) no-repeat 10% 50%;
+    background-size: 25%;
+}
+
+#sidenav-content ul.quicklinks li.lunch:hover {
+    background: #356a20 url(../../img/lunch.png) no-repeat 10% 50%;
+    background-size: 28%;
+}
+
+
+#sidenav-content ul.quicklinks li.mbp {
+    background: #333333 url(../../img/mbp.png) no-repeat 10% 50%;
+    background-size: 27%;
+}
+
+#sidenav-content ul.quicklinks li.mbp:hover {
+    background: #356a20 url(../../img/mbp.png) no-repeat 10% 50%;
+    background-size: 30%;
+}
+
+
+#sidenav-content ul.quicklinks li.office {
+    background: #333333 url(../../img/office.png) no-repeat 10% 50%;
+    background-size: 27%;
+}
+
+#sidenav-content ul.quicklinks li.office:hover {
+    background: #356a20 url(../../img/office.png) no-repeat 10% 50%;
+    background-size: 30%;
+}
+
+#sidenav-content ul.quicklinks li.veracross {
+    background: #333333 url(../../img/veracross.png) no-repeat 10% 50%;
+    background-size: 25%;
+}
+
+#sidenav-content ul.quicklinks li.veracross:hover {
+    background: #356a20 url(../../img/veracross.png) no-repeat 10% 50%;
+    background-size: 28%;
+}
+
+#sidenav-content ul.quicklinks li.vidigami {
+    background: #333333 url(../../img/vidigami.png) no-repeat 10% 50%;
+    background-size: 25%;
+}
+
+#sidenav-content ul.quicklinks li.vidigami:hover {
+  background: #356a20 url(../../img/vidigami.png) no-repeat 10% 50%;
+  background-size: 28%;
+}
+
+#block-quicklinks {
+    margin-bottom: 3rem;
+}
+
+#block-slider-news .views-field.views-field-title {
+    padding: 0 1rem;
+}
+
+
+
+/* Search Tab */
+
+#sidenav-content input[type="search"] {
+    width: 100%;
+}
+
+#sidenav-content #search-block-form,
+#sidenav-content #search-block-form--2 {
+    background: #333333;
+	color: #333333;
+	text-align: center;
+}
+
+#sidenav-content #search-block-form #edit-keys,
+#sidenav-content #search-block-form--2 #edit-keys--2 {
+    margin: .5rem 0.5rem 0;
+    width: 93%;
+    border: 0;
+}
+
+#block-searchfaq {
+    margin-top: 4rem;
+}
+
+/* News & Events Tab */
+
+#sidenav-content .cal-event {
+	margin-bottom: 1rem;
+}
+
+#sidenav-content .cal-date {
+    float: left;
+}
+
+#sidenav-content .cal-title {
+    margin-bottom: .5rem;
+    margin-left: 4rem;
+	text-align: left;
+}
+
+#block-tandemcalendars {
+    margin-top: 2rem;
+}
+
+
+#block-slider-news {
+    border-top: 2px solid;
+    margin-top: 1rem;
+	margin-bottom: 4rem;
+}
+
+/* IN PAGE BLOCKS */
+
+.region-content .block-block-content { /* Blocks at top of page content displaying with large space below. Not sure why... but this fixes. */
+	overflow: hidden;
+}
+
+.social-media {
+    margin-left: -1.5px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.region-footer .social-media {
+	text-align: left;
+}
+
+.region-footer .social-media a {
+    color: #82b456;
+}
+
+.region-footer .social-media a .fa-snowflake-o {
+    font-size: 2.7rem;
+    color: lightsteelblue;
+}
+
+.region-footer .social-media a:hover,
+.region-footer .social-media a:hover .fa-snowflake-o {
+    color: #ffd561;
+}
+
+.social-media a {
+    border-bottom: none;
+}
+
+#block-collegecounselingannualprofile {
+    float: right;
+    padding: 1rem;
+    border: 5px double #efefef;
+    margin: 0 0 1rem 1rem;
+	z-index: 10;
+	width: 25%;
+}
+
+#block-tandemcalgames {
+    float: right;
+    width: 47%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+@media only screen and (max-width: 72em) {
+
+	.region-content .block-supplement,
+	.region-content .block-contact,
+	.field--name-field-coach-info	{
+		clear: both;
+		float: none;
+		display: block;
+		text-align: center;
+		width: auto;
+	}
+
+	.region-content .block-supplement ul {
+		text-align: left;
+	}
+
+    .flexbox-packery.block-dashboard .block {
+        width: 83%;
+    }
+
+}
+
+@media only screen and (max-width: 53.12em) {
+
+	.region-footer .social-media {
+		text-align: center;
+	}
+
+}
+
+@media only screen and (max-width: 40em) {
+
+	#block-mobile-search {
+		display: block !important;
+	}
+
+	#block-aboutus-3-menu {
+		border-top: none;
+	}
+
+	#block-tandemcalgames {
+		float: none;
+		width: 100%;
+	}
+
+	#block-collegecounselingannualprofile {
+		width: 100%;
+	}
+
+}

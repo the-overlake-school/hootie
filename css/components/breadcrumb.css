@@ -1,0 +1,18 @@
+.breadcrumb {
+    color: #fdb813;
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: -1rem;
+    margin-top: 1rem;
+    text-align: right;
+    width: 100%;
+}
+
+.breadcrumb a {
+	border-bottom: none;
+	color: #fdb813;
+}
+
+.breadcrumb a:hover {
+	border-bottom: 1px dotted;
+}
